@@ -17,6 +17,9 @@ app.use(cookieParser());
 app.use(cors({
   origin: process.env.client_url,  // Vercel frontend ka URL
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
+  exposedHeaders: ['set-cookie']
 }));
 app.use("/api/auth", authRouter);
 app.use('/api/messages', messages);

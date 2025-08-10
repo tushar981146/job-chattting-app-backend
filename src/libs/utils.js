@@ -9,6 +9,8 @@ export const tokenGenerator = (userId, res) => {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
         httpOnly: true,
         sameSite: 'strict',
+         secure: true,
+         domain: '.onrender.com'
     });
 
     return token;

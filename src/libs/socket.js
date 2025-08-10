@@ -10,6 +10,8 @@ const io = new Server(server, {
         origin: ['http://localhost:5173',
             'https://job-chatting-app-frontend.vercel.app'
         ],
+         methods: ["GET", "POST"],
+         credentials: true
     }
 });
 

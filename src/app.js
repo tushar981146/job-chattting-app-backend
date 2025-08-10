@@ -14,11 +14,7 @@ dotenv.config();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: ["http://localhost:5173", 'https://job-chatting-app-frontend.vercel.app/'],
-  credentials: true,
-}))
-
+app.use(cors());
 app.use("/api/auth", authRouter);
 app.use('/api/messages', messages);
 

@@ -14,7 +14,10 @@ dotenv.config();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin: process.env.client_url,  // Vercel frontend ka URL
+  credentials: true,
+}));
 app.use("/api/auth", authRouter);
 app.use('/api/messages', messages);
 

@@ -15,7 +15,7 @@ dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: process.env.client_url,  // Vercel frontend ka URL
+  origin: 'https://job-chatting-app-frontend-wew9.vercel.app',  // Vercel frontend ka URL
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
